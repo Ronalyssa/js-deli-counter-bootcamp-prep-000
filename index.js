@@ -1,6 +1,12 @@
-function takeANumber(array, name) {
-  array.push(name);
-  return `Welcome, ${name}. You are number ${array.length} in line.`
+// function takeANumber(array, name) {
+//   array.push(name);
+//   return `Welcome, ${name}. You are number ${array.length} in line.`
+// }
+
+var counter = 0;
+function takeANumber(array) {
+  counter++
+  array.push(counter);
 }
 
 function nowServing(array) {
@@ -14,7 +20,6 @@ function nowServing(array) {
 function currentLine(array) {
  if(array.length > 0) {
    var array2 = []
-
    for (let i = 0; i < array.length; i++) {
      array2.push(`${i + 1}. ${array[i]}`)
    }
